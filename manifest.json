@@ -1,0 +1,40 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "9gag meme downloader",
+    "short_name": "9gag downloader",
+    "description": "A downloader for 9gag pictures an videos! Just click the icon in the upper right corner and download spicy memes",
+    "permissions": [
+        "downloads",
+        "declarativeContent"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://9gag.com/gag/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "images/9gag16.png",
+            "24": "images/9gag24.png",
+            "32": "images/9gag32.png"
+        },
+        "default_title": "9gag meme downloader"
+    },
+    "icons": { 
+        "16": "images/9gag16.png",
+        "48": "images/9gag48.png",
+        "128": "images/9gag128.png" 
+    }
+}
